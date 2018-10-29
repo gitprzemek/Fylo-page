@@ -1,0 +1,54 @@
+.nav {
+    position: relative;
+    height: auto;
+    @include gradient();
+
+    .nav__container {
+        max-width: 1100px;
+        height: 110px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .nav__ele {
+            padding: 0;
+            height: 38px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .nav__ele--left {
+            .nav__logo {
+                width: auto;
+                height: 100%;
+            }
+        }
+
+        .nav__ele--right {
+            font-size: 16px;
+
+            .nav__link {
+                display: inline-block;
+                text-decoration: none;
+                color: $white;
+                height: 100%;
+                width: 120px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .nav__link--green {
+                background-color: $green;
+                border-radius: 4px;
+
+                &:hover {
+                    background-color: lighten($color: $green, $amount: 10%);
+                }
+            }
+        }
+    }
+
+}

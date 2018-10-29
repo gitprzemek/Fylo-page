@@ -1,0 +1,86 @@
+.about {
+    height: auto;
+    position: relative;
+    // max-width: 100%;
+    // border-top: 1px solid $white;
+    background-color: $white;
+    padding: 0 0 100px 0;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: -10vh;
+        right: 0;
+        border-bottom: 10vh solid $white;
+        border-right: 100vw solid transparent;
+        background-color: transparent;
+        z-index: 0;
+    }
+
+    .about__container {
+        position: relative;
+        max-width: 1100px;
+        height: auto;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        color: $dark-blue;
+
+        .about__title {
+            flex: 1 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 60px 0;
+            font-size: 28px;
+        }
+
+        .about__img-cont {
+            flex: 0 1 40%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+
+            .about__img {
+                height: 290px;
+                width: auto;
+            }
+        }
+
+        .about__art-cont {
+            flex: 0 1 60%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: row;
+            flex-wrap: wrap;
+
+            .about__article {
+                flex: 0 1 50%;
+                padding: 20px 20px;
+                // text-align: left;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                flex-direction: row;
+                flex-wrap: wrap;
+
+                .about__article-title {
+                    font-size: 18px;
+                    font-weight: 700;
+                    margin-bottom: 15px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                .about__article-par {
+                    color: $grey;
+                }
+            }
+        }
+    }
+}

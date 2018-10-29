@@ -1,0 +1,93 @@
+.subscribe {
+    height: auto;
+    position: relative;
+    background-color: $white;
+    color: $dark-blue;
+    padding: 0 0 22vh 0;
+
+    // border: 1px solid $white;
+    .subscribe__container {
+        position: relative;
+        max-width: 1100px;
+        height: auto;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        text-align: center;
+
+        .subscribe__ele {
+            flex: 0 1 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .subscribe__title {
+
+
+            margin: 60px 0;
+            font-size: 28px;
+        }
+
+        .subscribe__par {
+            flex: 0 1 80%;
+            margin: 0 0 60px 0;
+            font-size: 20px;
+            color: $blue;
+            font-weight: 700;
+
+        }
+
+        .subscribe__form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @include tablets{
+                flex-direction: column;
+            }
+            .subscribe__input {
+                width: 450px;
+                height: 50px;
+                border: 1px solid rgba(127, 127, 127, 0.2);
+                border-radius: 5px;
+                margin: 0 15px;
+                padding: 0 30px;
+                -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+                -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+                box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+                color: rgb(127, 127, 127);
+
+                &::placeholder {
+                    color: rgba(127, 127, 127, 0.4);
+                }
+                @include mobiles{
+                    width: 90%;
+                }
+            }
+
+            .subscribe__btn {
+                width: 250px;
+                height: 50px;
+                background-color: $green;
+                border: none;
+                border-radius: 5px;
+                color: $white;
+                font-size: 20px;
+                margin: 0 15px;
+
+                &:hover {
+                    background-color: lighten($color: $green, $amount: 10%);
+                }
+                @include tablets{
+                    width: 450px;
+                    margin: 20px 0;
+                }
+                @include mobiles{
+                    width: 90%;
+                }
+            }
+        }
+    }
+}
