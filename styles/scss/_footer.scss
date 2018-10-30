@@ -2,6 +2,7 @@
     height: auto;
     position: relative;
     background-color: $dark-blue;
+    border-top: 1px solid $dark-blue;
 
     &::before {
         content: "";
@@ -23,13 +24,26 @@
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
-        @include tablets{
+
+        @include tablets {
             flex-wrap: wrap;
         }
+
+        @include mobiles {
+            flex-direction: column;
+            align-items: stretch;
+            align-items: center;
+        }
+
         .footer__ele {
             display: flex;
             justify-content: center;
             align-items: center;
+
+            @include mobiles {
+                width: 80%;
+            }
+
         }
 
         .footer__contact {
@@ -38,14 +52,21 @@
             flex-direction: column;
             align-items: flex-start;
             padding-right: 15px;
-            @include tablets{
+
+            @include tablets {
                 flex: 0 1 35%;
+                margin-bottom: 60px;
             }
+
             .footer__logo-cont {
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 margin-bottom: 20px;
+
+                @include mobiles {
+                    margin: 30px 0;
+                }
 
                 .footer__logo {
                     height: 50px;
@@ -58,6 +79,10 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
+
+                @include mobiles {
+                    margin: 15px 0;
+                }
 
                 .footer__contact-ico {}
 
@@ -78,18 +103,29 @@
             justify-content: space-around;
             border-left: 1px solid $grey;
             border-right: 1px solid $grey;
-            @include tablets{
+
+            @include tablets {
                 order: 3;
                 flex: 0 1 100%;
                 border: none;
                 padding: 40px 0;
             }
+
+            @include mobiles {
+                flex-direction: column;
+                padding: 40px 0 0 0;
+            }
+
             .footer__links-cont {
                 flex: 0 1 auto;
                 display: flex;
                 flex-direction: column;
                 height: 100%;
                 padding: 0 15px;
+
+                @include mobiles {
+                    padding: 0 0 25px 0;
+                }
 
                 .fotter__links-title {
                     font-size: 17px;
@@ -102,6 +138,10 @@
                     color: $light-grey;
                     margin: 9px 0;
                     font-size: 15px;
+
+                    @include mobiles {
+                        margin: 5px 0;
+                    }
                 }
             }
         }
@@ -115,14 +155,26 @@
             flex-direction: column;
             padding: 0 0 0 25px;
 
-            @include tablets{
+            @include tablets {
                 order: 2;
-                flex: 0 1 65%;
+                flex: 0 1 60%;
             }
+
+            @include mobiles {
+                padding: 0;
+                margin-bottom: 40px;
+            }
+
             .footer__form-par {
                 font-size: 15px;
                 text-align: left;
                 margin-bottom: 25px;
+
+                @include mobiles {
+                    font-size: 18px;
+                    text-align: center;
+                    margin-bottom: 45px;
+                }
             }
 
             .footer__form-input {
@@ -147,6 +199,11 @@
 
                 &:hover {
                     background-color: lighten($color: $green, $amount: 10%);
+                }
+
+                @include mobiles {
+                    width: 200px;
+                    border-radius: 3px;
                 }
             }
         }

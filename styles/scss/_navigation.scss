@@ -23,11 +23,19 @@
             .nav__logo {
                 width: auto;
                 height: 100%;
+
+                @include mobiles {
+                    height: 80%;
+                }
             }
         }
 
         .nav__ele--right {
             font-size: 16px;
+
+            @include mobiles {
+                font-size: 14px;
+            }
 
             .nav__link {
                 display: inline-block;
@@ -38,6 +46,11 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
+
+                @include mobiles {
+                    height: 90%;
+                    width: 90px;
+                }
             }
 
             .nav__link--green {
